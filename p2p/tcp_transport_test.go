@@ -1,7 +1,10 @@
 package p2p
 
-import "fmt"
+import "testing"
 
-func main() {
-	fmt.Println("this is coolooioeoo")
+func TestTCPTransport(t *testing.T) {
+
+	listenAddr := "4000"
+	lr := NewTCPTransport(listenAddr)
+
 }
