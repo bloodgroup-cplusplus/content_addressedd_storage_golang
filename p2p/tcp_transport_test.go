@@ -9,8 +9,15 @@ import (
 func TestTCPTransport(t *testing.T) {
 
 	listenAddr := "4000"
-	lr := NewTCPTransport(listenAddr)
+	tr := NewTCPTransport(listenAddr)
 
-	assert.Equal(t, lr.listenAddress, listenAddr)
+	assert.Equal(t, tr.listenAddress, listenAddr)
+
+	//Server
+	// tr.start()
+
+	// the transporter always listens and accepts
+
+	tr.ListenAndAccept()
 
 }
